@@ -29,24 +29,24 @@ function App() {
       const numWeeks = parseInt(weeks,10);
       const newDate = new Date(date+" 00:00:00");
 
-      console.log(newDate);
+      // console.log(newDate);
       const result = addDays(newDate,numWeeks, numDays)
       setEndDate(result.toLocaleDateString()+ ", "+ dayOfWeek[result.getDay()] );
-      console.log(result); 
+      // console.log(result); 
     }
 
     function subtractTime(inputs){
       const {date,weeks,days} = inputs;
-      console.log(date);
+      // console.log(date);
       
       const numDays = parseInt(days,10)*(-1);
       const numWeeks = parseInt(weeks,10)*(-1);
       const newDate = new Date(date + " 00:00:00");
 
-      console.log(newDate);
+      // console.log(newDate);
       const result = addDays(newDate,numWeeks, numDays)
       setStartDate(result.toLocaleDateString() + ", "+ dayOfWeek[result.getDay()] );
-      console.log(result); 
+      // console.log(result); 
     }
     
     // ----- Time Between Dates
@@ -61,7 +61,7 @@ function App() {
     }
 
     function calcDifference(){
-      console.log(dates);   
+      // console.log(dates);   
       const startDate = new Date(dates.start + " 00:00:00");
       const stopDate = new Date(dates.stop + " 00:00:00");
       const diff =  Math.floor(( stopDate - startDate ) / 86400000); 
