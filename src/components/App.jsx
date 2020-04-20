@@ -32,6 +32,8 @@ function App() {
       alert("numWeeks: " + numWeeks)
       alert("date: " + date)
       alert("date + 00:00:00: " + date+" 00:00:00")
+      const newDate = new Date(date);
+      alert("newDate: " + newDate)
       const newDate = new Date(date+" 00:00:00");
       alert("newDate: " + newDate)
       // alert(date.length)
