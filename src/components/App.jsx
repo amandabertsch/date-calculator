@@ -28,29 +28,23 @@ function App() {
       const {date,weeks,days} = inputs;
       const numDays = parseInt(days,10);
       const numWeeks = parseInt(weeks,10);
+
       const newDate = new Date(date.toString());
-      const normDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) )
-      // alert(date.length)
-      console.log("newDate: " + newDate);
-      
-      console.log("normDate: " + normDate);
+      const normDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) ) //normalize date, remove offset
+
       const result = addDays(normDate,numWeeks, numDays)
-      console.log(result);
-      
       setEndDate(result.toLocaleDateString()+ ", "+ dayOfWeek[result.getDay()] );
-      // console.log(result); 
     }
 
     function subtractTime(inputs){
       const {date,weeks,days} = inputs;
-      // console.log(date);
-      
       const numDays = parseInt(days,10)*(-1);
       const numWeeks = parseInt(weeks,10)*(-1);
-      const newDate = new Date(date + " 00:00:00");
 
-      // console.log(newDate);
-      const result = addDays(newDate,numWeeks, numDays)
+      const newDate = new Date(date.toString());
+      const normDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) );
+
+      const result = addDays(normDate,numWeeks, numDays)
       setStartDate(result.toLocaleDateString() + ", "+ dayOfWeek[result.getDay()] );
       // console.log(result); 
     }
@@ -69,9 +63,12 @@ function App() {
 
     function calcDifference(){
 
-      console.log(dates);   
-      const startDate = new Date(dates.start + " 00:00:00");
-      const stopDate = new Date(dates.stop + " 00:00:00");
+      // console.log(dates);   
+      const startDate = new Date(dates.start.toString());
+      console.log(startDate);
+      const stopDate = new Date(dates.stop.toString());
+      console.log(stopDate);
+      
       const diff =  Math.floor(( stopDate - startDate ) / 86400000); 
       const weeks = Math.floor(diff/7);
       const days = Math.floor(diff-weeks*7);

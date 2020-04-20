@@ -31,11 +31,11 @@ function App(props) {
             </div>
             <div className="col-md-1">
                 <label className="control-label">Week(s)</label>
-                <input onChange={handleChange} className="form-control" type="number" placeholder="0" name="weeks" value={inputs.weeks}></input>
+                <input onChange={handleChange} className="form-control" type="number" placeholder="0" name="weeks" ></input>
             </div>
             <div className="col-md-1">
                 <label className="control-label">Day(s)</label>
-                <input onChange={handleChange} className="form-control" type="number" placeholder="0" name="days" value={inputs.day}></input>
+                <input onChange={handleChange} className="form-control" type="number" placeholder="0" name="days" ></input>
             </div>
             <div className="col-md-2 mt-auto">
                 <button onClick={submitDate} type="button" className="btn btn-info my-4 my-md-0">Calculate</button>
