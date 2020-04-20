@@ -32,10 +32,10 @@ function App() {
       alert("numWeeks: " + numWeeks)
       alert("date: " + date)
       alert("date + 00:00:00: " + date+" 00:00:00")
-      const newDate = new Date(date);
+      const newDate = new Date(date.toString());
       alert("newDate: " + newDate)
-      const newDate = new Date(date+" 00:00:00");
-      alert("newDate: " + newDate)
+      const newDate2 = new Date(date+" 00:00:00");
+      alert("newDate: " + newDate2)
       // alert(date.length)
 
       // console.log(newDate);
