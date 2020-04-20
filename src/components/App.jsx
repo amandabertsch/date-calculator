@@ -29,10 +29,14 @@ function App() {
       const numDays = parseInt(days,10);
       const numWeeks = parseInt(weeks,10);
       const newDate = new Date(date.toString());
+      const normDate = new Date( newDate.getTime() + Math.abs(newDate.getTimezoneOffset()*60000) )
       // alert(date.length)
-
-      // console.log(newDate);
-      const result = addDays(newDate,numWeeks, numDays)
+      console.log("newDate: " + newDate);
+      
+      console.log("normDate: " + normDate);
+      const result = addDays(normDate,numWeeks, numDays)
+      console.log(result);
+      
       setEndDate(result.toLocaleDateString()+ ", "+ dayOfWeek[result.getDay()] );
       // console.log(result); 
     }
