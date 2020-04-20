@@ -19,7 +19,6 @@ function App(props) {
 
     function submitDate(event){
         props.onAdd(inputs);
-        alert(inputs.date)
     }
 
     return(

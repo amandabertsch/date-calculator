@@ -29,6 +29,7 @@ function App() {
       const numDays = parseInt(days,10);
       const numWeeks = parseInt(weeks,10);
       const newDate = new Date(date+" 00:00:00");
+      alert(date.length)
 
       // console.log(newDate);
       const result = addDays(newDate,numWeeks, numDays)
