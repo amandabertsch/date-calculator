@@ -11,6 +11,7 @@ function App() {
     start:"",
     stop:""
   }); 
+  
   const [timeDiff, setTimeDiff] = useState({
     weeks: "",
     days: ""
@@ -56,12 +57,14 @@ function App() {
             return{
                 ...prevInput,
                 [name]: value
-            }        
+            }
+                   
         });
     }
 
     function calcDifference(){
-      // console.log(dates);   
+
+      console.log(dates);   
       const startDate = new Date(dates.start + " 00:00:00");
       const stopDate = new Date(dates.stop + " 00:00:00");
       const diff =  Math.floor(( stopDate - startDate ) / 86400000); 
@@ -70,12 +73,14 @@ function App() {
       setTimeDiff({weeks: weeks, days: days});
       
     }
-
+    
     return(
-    <div>
+    <div className="pl-4">
       <div className="px-4 mt-2">
         <h1>Add Time</h1>
         <ChangeDate 
+          firstLabel="Start Date"
+          lastLabel="End Date"
           onAdd={addTime}
           result={endDate}
         />
@@ -86,6 +91,8 @@ function App() {
       <div className="px-4 mt-2">
         <h1>Subtract Time</h1>
         <ChangeDate 
+          firstLabel="End Date"
+          lastLabel="Start Date"
           onAdd={subtractTime}
           result={startDate}
         />
@@ -96,6 +103,7 @@ function App() {
       <div className="px-4 mt-2">
         <h1>Time Between Dates</h1>
         <div className="form-group row">
+
           <div className="col-2">
               <label className="control-label">Start Date</label>
               <input onChange={handleChange} className="form-control" type="date" placeholder="Start Date" name="start"></input>
@@ -106,18 +114,24 @@ function App() {
           </div>
           <div className="col-2 mt-auto">
                 <button onClick={calcDifference} type="button" className="btn btn-info">Calculate</button>
-            </div>
-            <div className="col-1 mt-auto">
-                <label className="control-label">Weeks</label>
-                <input value={timeDiff.weeks} className="form-control" readOnly style={{color: "green"}}></input>
-            </div>
-            <div className="col-1 mt-auto">
-                <label className="control-label">Days</label>
-                <input value={timeDiff.days} className="form-control" readOnly style={{color: "green"}}></input>
-            </div>
+          </div>
+
+          <div className="col-1 mt-auto">
+              <label className="control-label">Weeks</label>
+              <input value={timeDiff.weeks} className="form-control" readOnly style={{color: "green"}}></input>
+          </div>
+          <div className="col-1 mt-auto">
+              <label className="control-label">Days</label>
+              <input value={timeDiff.days} className="form-control" readOnly style={{color: "green"}}></input>
+          </div>
         </div>
           
       </div>
+
+      <footer>
+      <p>Made by <a href="www.amandabertsch.com"  target="_blank">Amanda Bertsch</a> </p>
+      </footer>
+      
 
     </div>
     

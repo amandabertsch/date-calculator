@@ -28,7 +28,7 @@ function App(props) {
     <div>
         <div className="form-group row">
             <div className="col-2">
-                <label className="control-label">Start Date</label>
+                <label className="control-label">{props.firstLabel}</label>
                 <input onChange={handleChange} className="form-control" type="date" placeholder="Start Date" name="date"></input>
             </div>
             <div className="col-1">
@@ -43,7 +43,7 @@ function App(props) {
                 <button onClick={submitDate} type="button" className="btn btn-info">Calculate</button>
             </div>
             <div className="col-2 mt-auto">
-                <label className="control-label">End Date</label>
+                <label className="control-label">{props.lastLabel}</label>
                 <input value={props.result} className="form-control" readOnly style={{color: "green"}}></input>
             </div>
         </div>
