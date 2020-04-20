@@ -65,9 +65,9 @@ function App() {
 
       // console.log(dates);   
       const startDate = new Date(dates.start.toString());
-      console.log(startDate);
+      // console.log(startDate);
       const stopDate = new Date(dates.stop.toString());
-      console.log(stopDate);
+      // console.log(stopDate);
       
       const diff =  Math.floor(( stopDate - startDate ) / 86400000); 
       const weeks = Math.floor(diff/7);
