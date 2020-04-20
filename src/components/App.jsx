@@ -129,7 +129,7 @@ function App() {
       </div>
 
       <footer>
-      <p>Made by <a href="www.amandabertsch.com"  target="_blank">Amanda Bertsch</a> </p>
+      <p>Made by <a href="https://www.amandabertsch.com"  target="_blank">Amanda Bertsch</a> </p>
       </footer>
       
 
