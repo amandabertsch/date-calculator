@@ -44,6 +44,10 @@
 	padding-bottom: 2.5rem;    /* Footer height */
 	}
 
+input#date-picker{
+	min-height: 1px; 
+}
+
 footer {
 	position: absolute;
 	text-align: center;

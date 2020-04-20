@@ -107,11 +107,11 @@ function App() {
 
             <div className="col-md-2">
                 <label className="control-label">Start Date</label>
-                <input onChange={handleChange} className="form-control" type="date" placeholder="Start Date" name="start"></input>
+                <input id="date-picker" onChange={handleChange} className="form-control" type="date" placeholder="MM/DD/YYYY" name="start"></input>
             </div>
             <div className="col-md-2">
                 <label className="control-label">End Date</label>
-                <input onChange={handleChange} className="form-control" type="date" placeholder="Stop Date" name="stop"></input>
+                <input id="date-picker" onChange={handleChange} className="form-control" type="date" placeholder="MM/DD/YYYY" name="stop"></input>
             </div>
             <div className="col-md-2 mt-auto">
                   <button onClick={calcDifference} type="button" className="btn btn-info my-4 my-md-0">Calculate</button>

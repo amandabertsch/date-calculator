@@ -15,6 +15,7 @@ function App(props) {
                 [name]: value
             }        
         });  
+        alert(inputs.date)
          
     }
 
@@ -29,7 +30,7 @@ function App(props) {
         <div className="form-group row px-md-0 px-4">
             <div className="col-md-2">
                 <label className="control-label">{props.firstLabel}</label>
-                <input onChange={handleChange} className="form-control" type="date" name="date" value={inputs.date}></input>
+                <input id="date-picker" onChange={handleChange} className="form-control" type="date" name="date" placeholder="DD/MM/YYYY"value={inputs.date}></input>
             </div>
             <div className="col-md-1">
                 <label className="control-label">Week(s)</label>
