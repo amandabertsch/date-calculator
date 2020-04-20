@@ -14,13 +14,12 @@ function App(props) {
                 ...prevInput,
                 [name]: value
             }        
-        });  
-         alert(typeof inputs.date)
+        }); 
     }
 
     function submitDate(event){
         props.onAdd(inputs);
-        event.preventDefault();
+        alert(inputs.date)
     }
 
     return(
