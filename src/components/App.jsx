@@ -27,15 +27,8 @@ function App() {
     function addTime(inputs){
       const {date,weeks,days} = inputs;
       const numDays = parseInt(days,10);
-      alert("numDays: " + numDays)
       const numWeeks = parseInt(weeks,10);
-      alert("numWeeks: " + numWeeks)
-      alert("date: " + date)
-      alert("date + 00:00:00: " + date+" 00:00:00")
       const newDate = new Date(date.toString());
-      alert("newDate: " + newDate)
-      const newDate2 = new Date(date+" 00:00:00");
-      alert("newDate: " + newDate2)
       // alert(date.length)
 
       // console.log(newDate);
